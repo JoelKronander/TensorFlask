@@ -11,14 +11,19 @@ Example:
 from flask import Flask, request, jsonify
 from mnist_classifiers import MNISTClassifier, MNISTClassifierInputError
 
+#The maximum number of images to handle in a single request
+#Should be set to reflect the memory and computational resources of the
+#machine the server is running on.
+MAX_BATCH_SIZE = 64
+
 #Create an instance of a MNISTClassifier that initizalizes and controls the
 #state of the tensorflow graph
-REQUEST_HANDLER = MNISTClassifier()
+REQUEST_HANDLER = MNISTClassifier(max_batch_size=MAX_BATCH_SIZE)
 
 #Create the Flask application handling HTTP requests
 FLSK_APP = Flask(__name__)
 
-@FLSK_APP.route('/', methods=['POST'])
+@FLSK_APP.route('/mnist/classify', methods=['POST'])
 def classify_mnist_images():
     """Unpacks the JSON data passed with the POST request and forwards it to the
     MNISTClassifier for classification"""
