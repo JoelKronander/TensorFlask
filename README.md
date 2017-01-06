@@ -36,7 +36,7 @@ The HTTP POST request /mnist/classify expects a JSON request. Example JSON data 
     * probability - The inferred probability of the predicted class [0-1] (Softmax score)
 
 ## Installing requirements
-The API is built using python3 and the requirements can be installed by
+The API uses python3 and the requirements can be installed by
 
 ```bash
     $pip3 install -r requirements.txt
