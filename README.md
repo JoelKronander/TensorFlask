@@ -1,5 +1,5 @@
 ## TensorFlask
-A simple web service API classifying MNIST digits from HTTP POST requests built using [Flask](http://flask.pocoo.org/), [TensorFlow](https://www.tensorflow.org/) and [TensorLayer](http://tensorlayer.readthedocs.io/en/latest/)
+A simple web service classifying MNIST digits from HTTP POST requests built using [Flask](http://flask.pocoo.org/), [TensorFlow](https://www.tensorflow.org/) and [TensorLayer](http://tensorlayer.readthedocs.io/en/latest/)
 
 The API uses HTTP POST operations to classify images of handwritten [MNIST digits](http://yann.lecun.com/exdb/mnist/) that is sent in the request. The single POST request available is /mnist/classify.
 The API uses JSON for both requests and responses, see below for a detailed specification of the JSON data format.
