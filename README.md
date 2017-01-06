@@ -14,6 +14,9 @@ The HTTP POST request /mnist/classify expects a JSON request. Example JSON data 
       {
         "image":"/9j/7QBEUGhvdG9...image contents...eYxxxzj/Coa6Bax//Z"
       },
+      {
+        "image":"/9j/7QBEUGhvdG9...image contents...eYxxxzj/Coa6Bax//Z"
+      }
   ]
 }
 ```
@@ -28,6 +31,10 @@ The HTTP POST request /mnist/classify expects a JSON request. Example JSON data 
         "class":1,
         "probability":0.98
       },
+      {
+        "class":8,
+        "probability":0.99
+      }
   ]
 }
 ```
