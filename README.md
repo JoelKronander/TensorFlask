@@ -4,7 +4,7 @@ A simple web service API classifying MNIST digits from HTTP POST requests built 
 The API uses HTTP POST operations to classify images of handwritten [MNIST digits](http://yann.lecun.com/exdb/mnist/) that is sent in the request. The single POST request available is /mnist/classify.
 The API uses JSON for both requests and responses, see below for a detailed specification of the JSON data format.
 Currently the API only supports 28 by 28 grayscale images and only handles a set maximum batch size of images in each
-request (see below for how to set the max batch size).
+request (the max batch size is currently set as a constant in server_application.py).
 
 ## JSON request format
 The HTTP POST request /mnist/classify expects a JSON request. Example JSON data for the request:
