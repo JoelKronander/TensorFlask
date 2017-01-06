@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""MNIST digit classification for JSON request objects
+"""MNIST digit classification using pretrained Tensorflow/layer models
 
 The main class of the module is MNISTClassifier
 MNISTClassifier.classify(request_list) parses JSON formatted requests and
@@ -106,7 +106,7 @@ class MNISTClassifier:
         feed_dict.update(dp_dict)
         pred, prob = self.session.run([self.predictions, self.probabilities], feed_dict=feed_dict)
         for i in range(pred.shape[0]):
-            classifications.append({'class' : int(pred[i]), 'score' : float(prob[i][pred[i]])})
+            classifications.append({'class' : int(pred[i]), 'probability' : float(prob[i][pred[i]])})
         return classifications
 
     def check_input(self, image):

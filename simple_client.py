@@ -78,7 +78,7 @@ def main():
 
     #Send request to server
     print("Requesting classifications for {} images...".format(len(requests_list)))
-    response = requests.post(args.server, json={'requests' : requests_list})
+    response = requests.post(args.server+'/mnist/classify', json={'requests' : requests_list})
 
     #Parse JSON response from server
     json_response = response.json()

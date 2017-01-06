@@ -21,9 +21,9 @@ MAX_BATCH_SIZE = 64
 REQUEST_HANDLER = MNISTClassifier(max_batch_size=MAX_BATCH_SIZE)
 
 #Create the Flask application handling HTTP requests
-FLSK_APP = Flask(__name__)
+app = Flask(__name__)
 
-@FLSK_APP.route('/mnist/classify', methods=['POST'])
+@app.route('/mnist/classify', methods=['POST'])
 def classify_mnist_images():
     """Unpacks the JSON data passed with the POST request and forwards it to the
     MNISTClassifier for classification"""
@@ -45,6 +45,7 @@ def classify_mnist_images():
         except Exception as excep:
             resp = bad_input("Unexpected server API error: {}"
                              .format(excep))
+            return resp
 
 def bad_input(message):
     """Returns a 404 status code JSON response with the provided message"""
