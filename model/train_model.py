@@ -38,8 +38,8 @@ def train_model():
     network = cnn_model.cnn_model_graph(x)
     y = network.outputs
 
-    ce = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(y, y_))
-    cost = ce
+    #ce = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(y, y_))
+    cost = tl.cost.cross_entropy(y, y_, name='cost')
 
     correct_prediction = tf.equal(tf.argmax(y, 1), y_)
     acc = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
