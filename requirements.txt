@@ -7,7 +7,7 @@ gevent==1.2.0
 greenlet==0.4.11
 gunicorn==19.6.0
 itsdangerous==0.24
-Jinja2==2.8.1
+Jinja2==2.11.3
 MarkupSafe==0.23
 matplotlib==1.5.3
 networkx==1.11
