@@ -1,6 +1,6 @@
 click==6.6
 cycler==0.10.0
-dask==0.13.0
+dask==2021.10.0
 decorator==4.0.10
 Flask==0.12
 gevent==1.2.0
