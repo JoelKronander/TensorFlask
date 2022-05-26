@@ -22,7 +22,7 @@ requests==2.12.4
 scikit-image==0.12.3
 scipy==0.18.1
 six==1.10.0
-tensorflow==1.0.1
+tensorflow==2.7.2
 tensorlayer==1.4.1
 toolz==0.8.2
 Werkzeug==0.11.15
