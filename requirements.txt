@@ -26,4 +26,4 @@ tensorflow==1.0.1
 tensorlayer==1.4.1
 toolz==0.8.2
 Werkzeug==0.11.15
-wheel==0.29.0
+wheel==0.38.1
